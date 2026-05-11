@@ -1,21 +1,14 @@
-class Library:
-    def __init__(self):
-        self.books = []
+# Lista única.
+
+# Escreva um programa que crie uma lista de 10 elementos solicitados ao usuário.
+# Em seguida, o programa deve criar um conjunto a partir dos elementos da lista para manter apenas os elementos únicos e exibir esse conjunto.
+
+# Escreva seu código aqui
+
+lista=[]
+for conj in range(10):
+    perg = input("Digite um valor: ")
+    lista.append(perg)
     
-    def add_book(self, book):
-        self.books.append(book)
-    
-    def display_books(self):
-        for book in self.books:
-            print(book)
-
-# Criação de um objeto da classe Library
-library = Library()
-
-# Adição de alguns livros
-library.add_book("War and Peace")
-library.add_book("1984")
-library.add_book("The Great Gatsby")
-
-# Exibição da lista de todos os livros
-library.display_books()
+conjunto=set(lista)
+print(conjunto)

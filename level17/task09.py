@@ -1,32 +1,19 @@
-def find_path(maze, start, end):
-    rows, cols = len(maze), len(maze[0])
-    stack = [(start, [start])]
-    visited = set()
+import traceback
 
-    while stack:
-        (x, y), path = stack.pop()
-        if (x, y) == end:
-            return path
-        if (x, y) in visited:
-            continue
-        visited.add((x, y))
-        
-        for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
-            nx, ny = x + dx, y + dy
-            if 0 <= nx < rows and 0 <= ny < cols and maze[nx][ny] == 0:
-                stack.append(((nx, ny), path + [(nx, ny)]))
-                
-    return []
+def complex_operation():
+    def inner_function_1():
+        def inner_function_2():
+            def inner_function_3():
+                # Aqui geramos uma exceção
+                raise ValueError("An error occurred")
+            inner_function_3()
+        inner_function_2()
+    try:
+        inner_function_1()
+    except Exception as e:
+        tb = traceback.extract_tb(e.__traceback__)
+        for frame in tb:
+            print(f"File: {frame.filename}, Line: {frame.lineno}, Function: {frame.name}, Code: {frame.line}")
 
-# Exemplo de uso
-maze = [
-    [0, 1, 0, 0, 0],
-    [0, 1, 0, 1, 0],
-    [0, 0, 0, 1, 0],
-    [0, 1, 1, 1, 0],
-    [0, 0, 0, 0, 0]
-]
-start = (0, 0)
-end = (4, 4)
-path = find_path(maze, start, end)
-print(path)
+# Exemplo de chamada da função
+complex_operation()

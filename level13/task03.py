@@ -1,16 +1,3 @@
-import json
-from datetime import datetime
-
-class DateTimeEncoder(json.JSONEncoder):
-    def default(self, obj):
-        if isinstance(obj, datetime):
-            return obj.isoformat()
-        return super().default(obj)
-
-data = {
-    'name': 'John Doe',
-    'timestamp': datetime.now()
-}
-
-json_str = json.dumps(data, cls=DateTimeEncoder)
-print(json_str)
+numbers = [1, 2, 3, 4, 5]
+squared_numbers = list(map(lambda x: x**2, numbers))
+print(squared_numbers)

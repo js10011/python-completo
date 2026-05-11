@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forma Complexa</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <h2>Seleção de Linguagens de Programação</h2>
+        <label for="languages">Escolha linguagens de programação:</label><br>
+        <select id="languages" name="languages" multiple required>
+            <option value="python">Python</option>
+            <option value="javascript">JavaScript</option>
+            <option value="java">Java</option>
+            <option value="csharp">C#</option>
+            <option value="cpp">C++</option>
+        </select><br><br>
+
+        <h2>Upload de Imagem</h2>
+        <label for="upload-image">Envie uma imagem (apenas .jpg, .jpeg, .png):</label><br>
+        <input type="file" id="upload-image" name="upload-image" accept=".jpg, .jpeg, .png" required><br><br>
+
+        <h2>Nível de Experiência</h2>
+        <label for="experience">Escolha o nível de experiência:</label><br>
+        <input type="range" id="experience" name="experience" min="0" max="10" title="Arraste o controle para escolher o nível de experiência"><br><br>
+
+        <h2>Tipo de Participação na Conferência</h2>
+        <label>Escolha o tipo de participação:</label><br>
+        <input type="radio" id="participant" name="participation-type" value="participant" required>
+        <label for="participant">Participante</label><br>
+
+        <input type="radio" id="speaker" name="participation-type" value="speaker">
+        <label for="speaker">Palestrante</label><br>
+
+        <input type="radio" id="organizer" name="participation-type" value="organizer">
+        <label for="organizer">Organizador</label><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

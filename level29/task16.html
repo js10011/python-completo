@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha de interesses e gênero</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Escolha seus interesses:</legend>
+            <div>
+                <input type="checkbox" id="sport" name="interest" value="sport">
+                <label for="sport">Esporte</label>
+            </div>
+            <div>
+                <input type="checkbox" id="music" name="interest" value="music">
+                <label for="music">Música</label>
+            </div>
+            <div>
+                <input type="checkbox" id="travel" name="interest" value="travel">
+                <label for="travel">Viagens</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Escolha seu gênero:</legend>
+            <div>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Masculino</label>
+            </div>
+            <div>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Feminino</label>
+            </div>
+        </fieldset>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
